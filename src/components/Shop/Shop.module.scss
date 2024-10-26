@@ -1,0 +1,45 @@
+.shopContainer {
+  display: flex;
+  padding: 40px 0;
+
+  .shopButton {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: hsl(0, 0%, 63%);
+    }
+  }
+
+  .arrow {
+    width: 50px;
+    animation: moveArrow 1s infinite alternate;
+    animation-play-state: running;
+    cursor: pointer;
+    z-index: 1;
+    transition: filter 0.3s ease;
+
+    &:hover {
+      animation-play-state: paused;
+      filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(0%)
+        hue-rotate(177deg) brightness(89%) contrast(92%);
+    }
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}

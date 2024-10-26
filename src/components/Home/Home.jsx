@@ -4,7 +4,7 @@ import { homeData } from "../../data/texts";
 import { images } from "../../data/images";
 import styles from "./Home.module.scss";
 
-export const Home = () => {
+export const Home = ({ children }) => {
   const { left, right } = images;
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -55,6 +55,7 @@ export const Home = () => {
             <div className={styles.homeDetails}>
               <h1 className={styles.homeTitle}>{data.title}</h1>
               <p className={styles.homeText}>{data.text}</p>
+              <div className={styles.shopContainer}>{children}</div>
             </div>
           </div>
         ))}
