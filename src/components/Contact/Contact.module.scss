@@ -1,0 +1,23 @@
+.attribution {
+  padding: 40px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: hsl(0, 0%, 63%);
+
+  .link {
+    color: hsl(0, 0%, 63%);
+    cursor: pointer;
+    margin-left: 5px;
+
+    &:hover {
+      color: hsl(0, 0%, 27%);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .attribution {
+    padding: 20px 0;
+  }
+}

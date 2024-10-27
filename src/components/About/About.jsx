@@ -1,7 +1,7 @@
 import { aboutData } from "../../data/texts";
 import styles from "./About.module.scss";
 
-export const About = () => {
+export const About = ({ children }) => {
   return (
     <div id="about">
       {aboutData.map((data, i) => (
@@ -13,6 +13,7 @@ export const About = () => {
           <div className={styles.aboutDetails}>
             <h1 className={styles.aboutTitle}>{data.title}</h1>
             <p className={styles.aboutText}>{data.text}</p>
+            <div className={styles.contact}>{children}</div>
           </div>
           <img
             className={`${styles.aboutImage} ${styles.light}`}
