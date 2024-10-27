@@ -1,0 +1,47 @@
+.aboutContainer {
+  width: 100%;
+
+  .aboutImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .aboutDetails {
+    padding: 20px 40px;
+
+    .aboutTitle {
+      font-size: 20px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: hsl(0, 0%, 0%);
+      margin: 25px 0 25px 0;
+    }
+
+    .aboutText {
+      color: hsl(0, 0%, 63%);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+
+    .aboutImage {
+      height: 100%;
+    }
+
+    .aboutDetails {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 60px;
+    }
+  }
+}
