@@ -3,7 +3,7 @@ import styles from "./About.module.scss";
 
 export const About = ({ children }) => {
   return (
-    <section>
+    <div>
       {aboutData.map((data, i) => (
         <div className={styles.aboutContainer} key={i}>
           <img
@@ -23,6 +23,6 @@ export const About = ({ children }) => {
           />
         </div>
       ))}
-    </section>
+    </div>
   );
 };

@@ -27,55 +27,53 @@ export const Home = ({ children }) => {
   };
 
   return (
-    <section>
-      <div
-        className={styles.homeContainer}
-        onKeyDown={onKeyboardArrowPress}
-        {...swipeOptions}
-      >
-        {homeData.map((data, i) => (
-          <div
-            key={i}
-            className={`${styles.slide} ${
-              i === currentSlide ? styles.active : ""
-            }`}
-          >
-            <div className={styles.homeContent}>
-              <img
-                className={styles.desktop}
-                src={data.images.desktop}
-                alt={`Desktop view of slide ${i + 1}`}
-              />
-              <img
-                className={styles.mobile}
-                src={data.images.mobile}
-                alt={`Mobile view of slide ${i + 1}`}
-              />
-              <div className={styles.arrows}>
-                <button
-                  className={`${styles.slideButton} ${styles.left}`}
-                  aria-label="Previous slide"
-                  onClick={goToPreviousSlide}
-                >
-                  <img src={left} alt="Left arrow for previous slide" />
-                </button>
-                <button
-                  className={`${styles.slideButton} ${styles.right}`}
-                  aria-label="Next slide"
-                  onClick={goToNextSlide}
-                >
-                  <img src={right} alt="Right arrow for next slide" />
-                </button>
-              </div>
-            </div>
-            <div className={styles.homeDetails}>
-              <h1 className={styles.homeTitle}>{data.title}</h1>
-              <p className={styles.homeText}>{data.text}</p>
-              <div className={styles.shopContainer}>{children}</div>
+    <div
+      className={styles.homeContainer}
+      onKeyDown={onKeyboardArrowPress}
+      {...swipeOptions}
+    >
+      {homeData.map((data, i) => (
+        <div
+          key={i}
+          className={`${styles.slide} ${
+            i === currentSlide ? styles.active : ""
+          }`}
+        >
+          <div className={styles.homeContent}>
+            <img
+              className={styles.desktop}
+              src={data.images.desktop}
+              alt={`Desktop view of slide ${i + 1}`}
+            />
+            <img
+              className={styles.mobile}
+              src={data.images.mobile}
+              alt={`Mobile view of slide ${i + 1}`}
+            />
+            <div className={styles.arrows}>
+              <button
+                className={`${styles.slideButton} ${styles.left}`}
+                aria-label="Previous slide"
+                onClick={goToPreviousSlide}
+              >
+                <img src={left} alt="Left arrow for previous slide" />
+              </button>
+              <button
+                className={`${styles.slideButton} ${styles.right}`}
+                aria-label="Next slide"
+                onClick={goToNextSlide}
+              >
+                <img src={right} alt="Right arrow for next slide" />
+              </button>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+          <div className={styles.homeDetails}>
+            <h1 className={styles.homeTitle}>{data.title}</h1>
+            <p className={styles.homeText}>{data.text}</p>
+            {i === 0 && <div className={styles.shopContainer}>{children}</div>}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
