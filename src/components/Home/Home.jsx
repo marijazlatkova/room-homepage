@@ -27,7 +27,7 @@ export const Home = ({ children }) => {
   };
 
   return (
-    <div id="home">
+    <section id="home" aria-labelledby="home-section">
       <div
         className={styles.homeContainer}
         onKeyDown={onKeyboardArrowPress}
@@ -41,14 +41,30 @@ export const Home = ({ children }) => {
             }`}
           >
             <div className={styles.homeContent}>
-              <img className={styles.desktop} src={data.images.desktop} />
-              <img className={styles.mobile} src={data.images.mobile} />
+              <img
+                className={styles.desktop}
+                src={data.images.desktop}
+                alt={`Desktop view of slide ${i + 1}`}
+              />
+              <img
+                className={styles.mobile}
+                src={data.images.mobile}
+                alt={`Mobile view of slide ${i + 1}`}
+              />
               <div className={styles.arrows}>
-                <button className={`${styles.slideButton} ${styles.left}`}>
-                  <img src={left} onClick={goToPreviousSlide} />
+                <button
+                  className={`${styles.slideButton} ${styles.left}`}
+                  aria-label="Previous slide"
+                  onClick={goToPreviousSlide}
+                >
+                  <img src={left} alt="Left arrow for previous slide" />
                 </button>
-                <button className={`${styles.slideButton} ${styles.right}`}>
-                  <img src={right} onClick={goToNextSlide} />
+                <button
+                  className={`${styles.slideButton} ${styles.right}`}
+                  aria-label="Next slide"
+                  onClick={goToNextSlide}
+                >
+                  <img src={right} alt="Right arrow for next slide" />
                 </button>
               </div>
             </div>
@@ -60,6 +76,6 @@ export const Home = ({ children }) => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

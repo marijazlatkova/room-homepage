@@ -11,25 +11,34 @@ export const Nav = () => {
   };
 
   return (
-    <div id="nav">
+    <nav id="nav" aria-labelledby="nav-section">
       <div className={styles.navContainer}>
-        <div className={styles.nav}>
+        <div className={styles.navbar}>
           <img
             className={styles.menu}
             onClick={toggleMenu}
             src={isOpen ? close : hamburger}
+            alt={isOpen ? "Close menu icon" : "Open menu icon"}
           />
-          <a href="#home">
-            <img className={styles.logo} src={logo} />
+          <a href="#home" aria-label="Go to home page">
+            <img className={styles.logo} src={logo} alt="Logo" />
           </a>
           <div className={`${styles.links} ${isOpen ? styles.show : ""}`}>
-            <a href="#home">Home</a>
-            <a href="#shop">Shop</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" aria-label="Navigate to Home section">
+              Home
+            </a>
+            <a href="#shop" aria-label="Navigate to Shop section">
+              Shop
+            </a>
+            <a href="#about" aria-label="Navigate to About section">
+              About
+            </a>
+            <a href="#contact" aria-label="Navigate to Contact section">
+              Contact
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
