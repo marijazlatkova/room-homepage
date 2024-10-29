@@ -27,7 +27,7 @@ export const Home = ({ children }) => {
   };
 
   return (
-    <section id="home" aria-labelledby="home-section">
+    <section>
       <div
         className={styles.homeContainer}
         onKeyDown={onKeyboardArrowPress}

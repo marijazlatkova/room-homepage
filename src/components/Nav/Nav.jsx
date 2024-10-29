@@ -11,9 +11,9 @@ export const Nav = () => {
   };
 
   return (
-    <nav id="nav" aria-labelledby="nav-section">
+    <nav>
       <div className={styles.navContainer}>
-        <div className={styles.navbar}>
+        <div className={styles.nav}>
           <img
             className={styles.menu}
             onClick={toggleMenu}

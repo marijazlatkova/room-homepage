@@ -2,7 +2,7 @@ import styles from "./Contact.module.scss";
 
 export const Contact = () => {
   return (
-    <section id="contact" aria-labelledby="contact-section">
+    <section>
       <div className={styles.attribution}>
         Challenge by
         <a

@@ -4,7 +4,7 @@ import styles from "./Shop.module.scss";
 export const Shop = () => {
   const { arrow } = images;
   return (
-    <section id="shop" aria-labelledby="shop-section">
+    <section>
       <div className={styles.shopContainer}>
         <button className={styles.shopButton} aria-label="Shop Now">
           SHOP NOW

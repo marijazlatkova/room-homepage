@@ -6,7 +6,7 @@
   top: 0;
   z-index: 1;
 
-  .navbar {
+  .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -74,7 +74,7 @@
 
 @media screen and (min-width: 1440px) {
   .navContainer {
-    .navbar {
+    .nav {
       gap: 50px;
 
       .menu {

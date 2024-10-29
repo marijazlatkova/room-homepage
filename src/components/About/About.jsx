@@ -3,7 +3,7 @@ import styles from "./About.module.scss";
 
 export const About = ({ children }) => {
   return (
-    <section id="about" aria-labelledby="about-section">
+    <section>
       {aboutData.map((data, i) => (
         <div className={styles.aboutContainer} key={i}>
           <img

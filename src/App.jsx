@@ -11,16 +11,16 @@ const App = () => {
         <Nav />
       </header>
       <main>
-        <section aria-labelledby="home-section">
+        <section id="home" aria-labelledby="home-section">
           <Home>
-            <section aria-labelledby="shop-section">
+            <section id="shop" aria-labelledby="shop-section">
               <Shop />
             </section>
           </Home>
         </section>
-        <section aria-labelledby="about-section">
+        <section id="about" aria-labelledby="about-section">
           <About>
-            <section aria-labelledby="contact-section">
+            <section id="contact" aria-labelledby="contact-section">
               <Contact />
             </section>
           </About>
