@@ -66,7 +66,7 @@ export const Home = ({ children }) => {
             </div>
           </div>
           <div className={styles.homeDetails}>
-            <h1 className={styles.homeTitle}>{data.title}</h1>
+            <h2 className={styles.homeTitle}>{data.title}</h2>
             <p className={styles.homeText}>{data.text}</p>
             {i === 0 && <div id="shop" className={styles.shopContainer}>{children}</div>}
             {i !== 0 && <div className={styles.shopContainer}>{children}</div>}

@@ -12,7 +12,7 @@ export const About = ({ children }) => {
             alt="Dark themed about section image"
           />
           <div className={styles.aboutDetails}>
-            <h1 className={styles.aboutTitle}>{data.title}</h1>
+            <h2 className={styles.aboutTitle}>{data.title}</h2>
             <p className={styles.aboutText}>{data.text}</p>
             <div className={styles.contact}>{children}</div>
           </div>
