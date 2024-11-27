@@ -17,7 +17,7 @@ const App = () => {
           <h2 className={styles.visuallyHidden}>Home Section</h2>
           <Home>
             <section>
-              <h3 className={styles.visuallyHidden}>Shop Section</h3>
+              <h2 className={styles.visuallyHidden}>Shop Section</h2>
               <Shop />
             </section>
           </Home>
@@ -26,7 +26,7 @@ const App = () => {
           <h2 className={styles.visuallyHidden}>About Section</h2>
           <About>
             <section>
-              <h3 className={styles.visuallyHidden}>Contact Section</h3>
+              <h2 className={styles.visuallyHidden}>Contact Section</h2>
               <Contact />
             </section>
           </About>
