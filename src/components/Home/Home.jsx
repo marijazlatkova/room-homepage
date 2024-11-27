@@ -27,7 +27,7 @@ export const Home = ({ children }) => {
   };
 
   return (
-    <div
+    <div id="home"
       className={styles.homeContainer}
       onKeyDown={onKeyboardArrowPress}
       {...swipeOptions}
@@ -35,9 +35,7 @@ export const Home = ({ children }) => {
       {homeData.map((data, i) => (
         <div
           key={i}
-          className={`${styles.slide} ${
-            i === currentSlide ? styles.active : ""
-          }`}
+          className={`${styles.slide} ${i === currentSlide ? styles.active : ""}`}
         >
           <div className={styles.homeContent}>
             <img
@@ -70,11 +68,8 @@ export const Home = ({ children }) => {
           <div className={styles.homeDetails}>
             <h1 className={styles.homeTitle}>{data.title}</h1>
             <p className={styles.homeText}>{data.text}</p>
-            {(i === 0 || i === 1 || i === 2) && (
-              <div className={styles.shopContainer}>
-                {React.cloneElement(children, { uniqueId: `shop-${i}` })}
-              </div>
-            )}
+            {i === 0 && <div id="shop" className={styles.shopContainer}>{children}</div>}
+            {i !== 0 && <div className={styles.shopContainer}>{children}</div>}
           </div>
         </div>
       ))}
